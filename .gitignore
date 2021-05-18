@@ -19,3 +19,11 @@
 /.phpcs-cache
 /phpcs.xml
 ###< squizlabs/php_codesniffer ###
+
+###> code coverage ###
+/build/
+###< code coverage ###
+
+###> Panther ###
+/drivers/
+###< Panther ###

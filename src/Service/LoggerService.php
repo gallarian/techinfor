@@ -18,8 +18,13 @@ class LoggerService
         $this->entityManager = $entityManager;
     }
 
-    public function log(string $service, string $action, string $type, string $message, ?string $originalMessage = null): void
-    {
+    public function log(
+        string $service,
+        string $action,
+        string $type,
+        string $message,
+        ?string $originalMessage = null
+    ): void {
         $log = new Log($service, $action, $type, $message, $originalMessage);
 
         $this->entityManager->persist($log);

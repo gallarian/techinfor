@@ -54,8 +54,13 @@ class Log
      */
     private ?string $originalMessage;
 
-    public function __construct(string $service, string $action, string $type, string $message, string $originalMessage = null)
-    {
+    public function __construct(
+        string $service,
+        string $action,
+        string $type,
+        string $message,
+        string $originalMessage = null
+    ) {
         $this->service = $service;
         $this->action = $action;
         $this->type = $type;

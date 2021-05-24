@@ -1,0 +1,28 @@
+{% extends "admin/layout.html.twig" %}
+{% block body %}
+    {% include "admin/partials/messageFlash.html.twig" %}
+    <table>
+        <thead>
+            <tr>
+                <th>nom</th>
+                <th>niveau</th>
+                <th>date de creation</th>
+                <th>date de mise a jour</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for g in groups %}
+        <tr>
+            <td>{{ g.name }}</td>
+            <td>{{ g.scope }}</td>
+            <td>{{ g.createdAt|date }}</td>
+            <td></td>
+            <td>
+                <a href="{{ path("admin_group_update", {"id" : g.id}) }}">editer</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
